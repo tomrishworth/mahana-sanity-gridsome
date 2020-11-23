@@ -41,7 +41,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Mahana Biopharma'
   }
 }
 </script>

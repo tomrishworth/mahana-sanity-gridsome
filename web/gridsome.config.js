@@ -29,9 +29,9 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  siteName: 'Gridsome Blog Starter',
+  siteName: 'Mahana Biopharma',
   siteDescription:
-    'A simple, hackable & minimalistic starter for Gridsome that uses structured content from Sanity.io.',
+    'Harnessing cannabis plant genetics to create novel migraine medicines from unique cultivars',
 
   templates: {
     SanityPost: '/:slug__current'
