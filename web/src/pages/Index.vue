@@ -17,6 +17,14 @@
   </div>
 </template>
 
+<script>
+export default {
+  metaInfo: {
+    title: 'A Cure for Migraine is Coming'
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 .landing {
   background-color: #0a0b14;
@@ -29,7 +37,7 @@
   text-align: center;
   padding-bottom: $spacer-6;
 
-  background-image: url('https://res.cloudinary.com/dfnxivzkc/image/upload/c_fill,f_auto,h_500,w_500/v1606100248/Website/homepage-hero-desktop_zt9gum.jpg');
+  background-image: url('https://res.cloudinary.com/dfnxivzkc/image/upload/c_fill,f_auto,h_1000,w_1000/v1606100248/Website/homepage-hero-desktop_zt9gum.jpg');
   @include media-breakpoint-up(sm) {
     background-position: center center;
     background-size: cover;
