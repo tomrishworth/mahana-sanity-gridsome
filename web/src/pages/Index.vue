@@ -30,6 +30,7 @@ export default {
   background-color: #0a0b14;
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: contain;
   height: 100vh;
   display: flex;
   justify-content: center;
