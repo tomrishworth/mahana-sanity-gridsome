@@ -1,42 +1,201 @@
-// Default variables
-html {
-	--base-font-size: 20px;
-}
+/**
+ *
+ * Bootstrap Variable Overrrides
+ *
+ */
 
-// Light default theme
-body {
- 	--bg-color: #F3F7F9;
- 	--bg-content-color: #fff;
- 	--bg-code: #fffbf3;
- 	--body-color: #444;
- 	--title-color: #111;
- 	--link-color: #6b17e6;
- 	--border-color:  rgba(0,0,0,.1);;
-  --space: 3.5rem;
-  --content-width: 860px;
-  --header-height: 80px;
-  --radius: 5px;
-}
+// Colors
 
-// Make  things smaller for mobile
-@media screen and (max-width: 650px) {
-	html {
-		--base-font-size: 17px;
-	}
-	body {
-		--space: 1.5rem;
-		--header-height: 60px;
-	}
-}
+$blue: #0892d0;
+$blue-dark: #00293b;
+// $gray-100: #f8f9fa;
+// $gray-600: #6c757d;
+// $gray-800: #343a40;
+// $black: #000;
 
+// $blue-dark: #093185;
+// $blue-light: #00aeef;
+// $blue-lightest: #dceff4;
+// $blue-darkest: #032875;
 
-// Override variables for Dark theme
-body[data-theme="dark"] {
- 	--bg-color: #0D2538;
- 	--bg-content-color: #0f2d44;
- 	--bg-code: rgba(0,0,0,.3);
- 	--border-color:  rgba(255,255,255,.1);;
- 	--body-color: #ced8de;
- 	--title-color: #fff;
- 	--link-color: #af9cef;
-}
+// $yellow: #f9fc73;
+
+$primary: $blue;
+// $secondary: $blue-light;
+// $light: $gray-100;
+// $dark: $blue-dark;
+// $text-muted: $gray-600;
+// $info: $yellow;
+
+// $gradient: linear-gradient(180deg, #ffffff 0%, #edeee9 36.38%, #dcdfe6 94.6%, #dde0e6 99.48%);
+
+// $theme-colors: () !default;
+// $theme-colors: map-merge(
+//   (
+//     'primary': $primary,
+//     'secondary': $secondary,
+//     'light': $light,
+//     'dark': $dark,
+//   ),
+//   $theme-colors
+// );
+
+$body-color: $blue-dark;
+// $navbar-dark-color: #fff;
+// $input-color: $primary;
+// $link-color: $secondary;
+
+// $link-decoration: underline;
+// $link-hover-color: $secondary;
+
+$enable-grid-classes: true;
+$enable-responsive-font-sizes: true;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1680px
+);
+
+// Grid Breakpoints
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1440px
+);
+
+// Rounded
+$border-radius: 0.25rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.2rem;
+
+// Shadow
+// $box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075);
+// $box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+// $box-shadow-lg: 0 1rem 3rem rgba($black, 0.175);
+
+$font-family-sans-serif: 'DM Sans', sans-serif;
+
+// Spacing
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25
+    ),
+    2: (
+      $spacer * 0.5
+    ),
+    3: (
+      $spacer * 0.75
+    ),
+    4: $spacer,
+    5: (
+      $spacer * 1.5
+    ),
+    6: (
+      $spacer * 2
+    ),
+    7: (
+      $spacer * 3
+    ),
+    8: (
+      $spacer * 4
+    ),
+    9: (
+      $spacer * 6
+    ),
+    10: (
+      $spacer * 8
+    ),
+    11: (
+      $spacer * 12
+    ),
+    12: (
+      $spacer * 16
+    ),
+    13: (
+      $spacer * 24
+    ),
+    14: (
+      $spacer * 32
+    ),
+    15: (
+      $spacer * 40
+    ),
+    16: (
+      $spacer * 48
+    )
+  ),
+  $spacers
+);
+
+$spacer-1: map-get($spacers, 1);
+$spacer-2: map-get($spacers, 2);
+$spacer-3: map-get($spacers, 3);
+$spacer-4: map-get($spacers, 4);
+$spacer-5: map-get($spacers, 5);
+$spacer-6: map-get($spacers, 6);
+$spacer-7: map-get($spacers, 7);
+$spacer-8: map-get($spacers, 8);
+$spacer-9: map-get($spacers, 9);
+$spacer-10: map-get($spacers, 10);
+$spacer-11: map-get($spacers, 11);
+$spacer-12: map-get($spacers, 12);
+$spacer-13: map-get($spacers, 13);
+$spacer-14: map-get($spacers, 14);
+$spacer-15: map-get($spacers, 15);
+$spacer-16: map-get($spacers, 16);
+
+// Font sizes
+
+$text-xs: 0.8rem; // 12px
+$text-sm: 0.9rem; // 14px
+$text-base: 1rem; // 16px
+$text-md: 1.125rem; // 18px
+$text-lg: 1.25rem; // 20px
+$text-xl: 1.5rem; // 24px
+$text-2xl: 1.875rem; // 30px
+$text-3xl: 2rem; // 36px
+$text-4xl: 3rem; // 48px
+$text-5xl: 3.75rem; // 60px
+$text-6xl: 4.5rem; // 72px
+
+$font-size-base: 1.1rem;
+$font-size-lg: $font-size-base * 1.25;
+$font-size-sm: 1rem;
+$line-height-base: 1.4;
+
+$h1-font-size: $font-size-base * 3;
+$h2-font-size: 3rem;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$headings-font-weight: 700;
+$headings-line-height: 1;
+
+$display1-size: $text-6xl;
+$display2-size: $text-5xl;
+$display3-size: $text-4xl;
+$display4-size: $text-3xl;
+
+// Buttons
+
+// $btn-padding-y: $spacer-2;
+// $btn-padding-x: $spacer-5;
+// $btn-font-size: $text-md;
+// $btn-font-weight: 600;
+
+// Navbar
+
+$navbar-dark-color: #fff;
+$navbar-nav-link-padding-x: $spacer-5;

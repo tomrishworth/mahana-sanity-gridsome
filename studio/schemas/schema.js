@@ -6,6 +6,8 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // document schemas
 import author from './documents/author'
+import teamMember from './documents/teamMember'
+import faq from './documents/faq'
 import category from './documents/category'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
@@ -30,6 +32,8 @@ export default createSchema({
     post,
     category,
     author,
+    teamMember,
+    faq,
     mainImage,
     authorReference,
     bodyPortableText,

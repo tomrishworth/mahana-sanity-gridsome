@@ -1,90 +1,76 @@
 <template>
-  <div id="app">
-    <header class="header">
-      <div class="header__left">
-        <header-logo v-if="showLogo" />
-      </div>
-
-      <div class="header__right">
-        <toggle-theme />
-      </div>
+  <div>
+    <header class="header w-100">
+      <b-navbar type="dark" toggleable="lg" class="d-flex">
+        <b-navbar-brand href="/">
+          <g-image src="~/assets/images/logo.png" alt="Mahana Logo" width="150" />
+        </b-navbar-brand>
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav class="ml-auto">
+            <!-- <b-nav-item router-component-name="g-link" to="/">Home</b-nav-item> -->
+            <b-nav-item router-component-name="g-link" to="/daysaver">Daysaver</b-nav-item>
+            <b-nav-item router-component-name="g-link" to="/our-products">Our Products</b-nav-item>
+            <b-nav-item router-component-name="g-link" to="/cannabis-and-migraines"
+              >Cannabis & Migraines</b-nav-item
+            >
+            <b-nav-item router-component-name="g-link" to="/our-plans">Our Plans</b-nav-item>
+            <b-nav-item router-component-name="g-link" to="/about">About</b-nav-item>
+            <b-nav-item router-component-name="g-link" to="/contact">Contact</b-nav-item>
+            <!-- <b-button variant="outline-primary" v-b-modal.invest-modal>Invest</b-button> -->
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
     </header>
 
-    <main class="main">
-      <slot />
-    </main>
-
-    <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}.</span>
-      <span class="footer__links">
-        Powered by
-        <a href="//gridsome.org">Gridsome</a> &amp;
-        <a href="//www.sanity.io">Sanity.io</a>
-      </span>
-    </footer>
+    <slot />
+    <b-modal id="invest-modal" title="Invest with Us">
+      <p class="my-4">Here is some text about the invest process</p>
+      <p>Mailchimp signup form will go here</p>
+    </b-modal>
   </div>
 </template>
 
-<script>
-import HeaderLogo from '~/components/HeaderLogo'
-import ToggleTheme from '~/components/ToggleTheme'
-
-export default {
-  props: {
-    showLogo: {
-      type: Boolean,
-      default: true
-    }
-  },
-  components: {
-    HeaderLogo,
-    ToggleTheme
+<static-query>
+query {
+  metadata {
+    siteName
   }
 }
-</script>
+</static-query>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: var(--header-height);
-  padding: 0 calc(var(--space) / 2);
-  top: 0;
+  position: absolute;
   z-index: 10;
-
-  &__left,
-  &__right {
-    display: flex;
-    align-items: center;
-  }
-
-  @media screen and (min-width: 1300px) {
-    //Make header sticky for large screens
-    position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  &::before {
+    content: '';
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     width: 100%;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
-.main {
-  margin: 0 auto;
-  padding: 1.5vw 15px 0;
+.navbar {
+  position: relative;
+  z-index: 7;
 }
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: calc(var(--space) / 2);
-  text-align: center;
-  font-size: 0.8em;
+.navbar-brand {
+  position: absolute;
+  top: 0;
+  left: $spacer-4;
+}
 
-  > span {
-    margin: 0 0.35em;
-  }
-
-  a {
-    color: currentColor;
-  }
+.nav-link {
+  font-size: $text-sm;
+  font-weight: 700;
 }
 </style>

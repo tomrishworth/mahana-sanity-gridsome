@@ -1,0 +1,107 @@
+<template>
+  <Layout>
+    <hero-title
+      class="mb-8"
+      pageTitle="Daysaver"
+      imageUrl="https://res.cloudinary.com/dfnxivzkc/image/upload/v1606072116/Website/piha_lomlcn.jpg"
+    ></hero-title>
+    <section class="static">
+      <div class="container-md ">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi,
+          eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem
+          dolores inventore iste reprehenderit maxime! Iusto.
+        </p>
+        <div>
+          <p>
+            <span>Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.</span>
+            <span>Quam temere in vitiis, legem sancimus haerentia.</span>
+            <span>Cras mattis iudicium purus sit amet fermentum.</span>
+            <span>Quid securi etiam tamquam eu fugiat nulla pariatur.</span>
+          </p>
+          <p>
+            <span>Fictum, deserunt mollit anim laborum astutumque!</span>
+            <span>Quisque placerat facilisis egestas cillum dolore.</span>
+            <span>Non equidem invideo, miror magis posuere velit aliquet.</span>
+            <span>Hi omnes lingua, institutis, legibus inter se differunt.</span>
+          </p>
+          <p>
+            <span>Plura mihi bona sunt, inclinet, amari petere vellent.</span>
+            <span>At nos hinc posthac, sitientis piros Afros.</span>
+            <span>Me non paenitet nullum festiviorem excogitasse ad hoc.</span>
+            <span>Tu quoque, Brute, fili mi, nihil timor populi, nihil!</span>
+            <span>Magna pars studiorum, prodita quaerimus.</span>
+          </p>
+          <p>
+            <span>Unam incolunt Belgae, aliam Aquitani, tertiam.</span>
+            <span>Donec sed odio operae, eu vulputate felis rhoncus.</span>
+            <span>Morbi fringilla convallis sapien, id pulvinar odio volutpat.</span>
+          </p>
+          <p>
+            <span
+              >Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt
+              ut labore et dolore magna aliqua.</span
+            >
+            <span>Ambitioni dedisse scripsisse iudicaretur.</span>
+            <span>Idque Caesaris facere voluntate liceret: sese habere.</span>
+            <span>Fabio vel iudice vincam, sunt in culpa qui officia.</span>
+          </p>
+        </div>
+        <div>
+          <p>
+            <span>Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.</span>
+            <span>Quam temere in vitiis, legem sancimus haerentia.</span>
+            <span>Cras mattis iudicium purus sit amet fermentum.</span>
+            <span>Quid securi etiam tamquam eu fugiat nulla pariatur.</span>
+          </p>
+          <p>
+            <span>Fictum, deserunt mollit anim laborum astutumque!</span>
+            <span>Quisque placerat facilisis egestas cillum dolore.</span>
+            <span>Non equidem invideo, miror magis posuere velit aliquet.</span>
+            <span>Hi omnes lingua, institutis, legibus inter se differunt.</span>
+          </p>
+          <p>
+            <span>Plura mihi bona sunt, inclinet, amari petere vellent.</span>
+            <span>At nos hinc posthac, sitientis piros Afros.</span>
+            <span>Me non paenitet nullum festiviorem excogitasse ad hoc.</span>
+            <span>Tu quoque, Brute, fili mi, nihil timor populi, nihil!</span>
+            <span>Magna pars studiorum, prodita quaerimus.</span>
+          </p>
+          <p>
+            <span>Unam incolunt Belgae, aliam Aquitani, tertiam.</span>
+            <span>Donec sed odio operae, eu vulputate felis rhoncus.</span>
+            <span>Morbi fringilla convallis sapien, id pulvinar odio volutpat.</span>
+          </p>
+          <p>
+            <span
+              >Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt
+              ut labore et dolore magna aliqua.</span
+            >
+            <span>Ambitioni dedisse scripsisse iudicaretur.</span>
+            <span>Idque Caesaris facere voluntate liceret: sese habere.</span>
+            <span>Fabio vel iudice vincam, sunt in culpa qui officia.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </Layout>
+</template>
+
+<script>
+import HeroTitle from '~/components/HeroTitle'
+
+export default {
+  metaInfo: {
+    title: 'Daysaver'
+  },
+  components: {
+    HeroTitle
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+// .static {
+//   background-color: red;
+// }
+</style>

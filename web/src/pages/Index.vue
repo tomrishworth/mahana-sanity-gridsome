@@ -1,80 +1,54 @@
 <template>
-  <Layout :show-logo="false">
-    <!-- Author intro -->
-    <author-card :show-title="true" />
-
-    <!-- List posts -->
-    <div class="posts">
-      <post-card
-        v-for="edge in $page.posts.edges"
-        :key="edge.node.id"
-        :post="edge.node"
-        :metadata="$page.metadata"
+  <div class="landing">
+    <div>
+      <g-image
+        class="logo mb-4"
+        src="https://res.cloudinary.com/dfnxivzkc/image/upload/v1606100361/Website/logo_jbhlbs.png"
+        alt="Mahana Logo"
       />
+      <h1 class="mb-5">Coming soon</h1>
+      <p class="text-white mb-0">Media & Investor Enquires</p>
+      <p class="">
+        <a title="Email Ed McCullagh" href="mailto:ed@mahanabiopharma.co.nz"
+          >ed@mahanabiopharma.co.nz</a
+        >
+      </p>
     </div>
-  </Layout>
+  </div>
 </template>
 
-<page-query>
-{
-  metadata {
-    sanityOptions {
-      projectId
-      dataset
-    }
-  }
-  posts: allSanityPost(sortBy: "publishedAt") {
-    edges {
-      node {
-        id
-        title
-        slug {
-          current
-        }
-        categories {
-          id
-          title
-        }
-        publishedAt(format: "D. MMMM YYYY")
-        _rawExcerpt
-        mainImage {
-          asset {
-            _id
-            url
-          }
-          caption
-          alt
-          hotspot {
-            x
-            y
-            height
-            width
-          }
-          crop {
-            top
-            bottom
-            left
-            right
-          }
-        }
-      }
-    }
+<style lang="scss" scoped>
+.landing {
+  background-color: #0a0b14;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  padding-bottom: $spacer-6;
+
+  background-image: url('https://res.cloudinary.com/dfnxivzkc/image/upload/c_fill,f_auto,h_500,w_500/v1606100248/Website/homepage-hero-desktop_zt9gum.jpg');
+  @include media-breakpoint-up(sm) {
+    background-position: center center;
+    background-size: cover;
+    justify-content: flex-start;
+    padding-left: $spacer-9;
+    padding-bottom: $spacer-8;
+    background-image: url('https://res.cloudinary.com/dfnxivzkc/image/upload/f_auto/v1606100248/Website/homepage-hero-desktop_zt9gum.jpg');
   }
 }
 
-</page-query>
-
-<script>
-import AuthorCard from '~/components/AuthorCard'
-import PostCard from '~/components/PostCard'
-
-export default {
-  components: {
-    AuthorCard,
-    PostCard
-  },
-  metaInfo: {
-    title: 'Hello, world!'
+.logo {
+  width: 160px;
+  @include media-breakpoint-up(sm) {
+    width: 200px;
   }
 }
-</script>
+
+h1 {
+  font-size: $text-xl;
+  color: #fff;
+}
+</style>

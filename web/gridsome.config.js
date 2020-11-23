@@ -8,9 +8,25 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`
 })
 
+const path = require('path')
+
 const clientConfig = require('./client-config')
 
 const isProd = process.env.NODE_ENV === 'production'
+
+function addStyleResource(rule) {
+  rule
+    .use('style-resource')
+    .loader('style-resources-loader')
+    .options({
+      patterns: [
+        path.resolve(__dirname, './src/assets/style/_variables.scss'),
+        path.resolve(__dirname, './node_modules/bootstrap/scss/_functions.scss'),
+        path.resolve(__dirname, './node_modules/bootstrap/scss/_variables.scss'),
+        path.resolve(__dirname, './node_modules/bootstrap/scss/_mixins.scss')
+      ]
+    })
+}
 
 module.exports = {
   siteName: 'Gridsome Blog Starter',
@@ -23,6 +39,19 @@ module.exports = {
 
   plugins: [
     {
+      use: 'gridsome-plugin-purgecss',
+      options: {
+        content: [
+          './src/**/*.vue',
+          './src/**/*.js',
+          './src/**/*.jsx',
+          './src/**/*.pug',
+          './src/**/*.md'
+        ],
+        defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+      }
+    },
+    {
       use: 'gridsome-source-sanity',
       options: {
         ...clientConfig.sanity,
@@ -32,25 +61,11 @@ module.exports = {
         watchMode: !isProd
       }
     }
-    /* {
-      // Create posts from markdown files
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'Post',
-        path: 'content/posts/*.md',
-        route: '/:slug',
-        refs: {
-          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-          tags: {
-            typeName: 'Tag',
-            route: '/tag/:id',
-            create: true
-          }
-        }
-      },
-      {
-
-      }
-    } */
-  ]
+  ],
+  chainWebpack(config) {
+    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+    types.forEach(type => {
+      addStyleResource(config.module.rule('scss').oneOf(type))
+    })
+  }
 }
