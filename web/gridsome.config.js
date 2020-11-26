@@ -33,10 +33,6 @@ module.exports = {
   siteDescription:
     'Harnessing cannabis plant genetics to create novel migraine medicines from unique cultivars',
 
-  templates: {
-    SanityPost: '/:slug__current'
-  },
-
   plugins: [
     {
       use: 'gridsome-plugin-purgecss',
@@ -50,17 +46,17 @@ module.exports = {
         ],
         defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
       }
-    },
-    {
-      use: 'gridsome-source-sanity',
-      options: {
-        ...clientConfig.sanity,
-        typeName: 'Sanity',
-        token: process.env.SANITY_TOKEN,
-        overlayDrafts: !isProd,
-        watchMode: !isProd
-      }
     }
+    // {
+    //   use: 'gridsome-source-sanity',
+    //   options: {
+    //     ...clientConfig.sanity,
+    //     typeName: 'Sanity',
+    //     token: process.env.SANITY_TOKEN,
+    //     overlayDrafts: !isProd,
+    //     watchMode: !isProd
+    //   }
+    // }
   ],
   chainWebpack(config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']

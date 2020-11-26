@@ -3,7 +3,7 @@
     <div>
       <g-image
         class="logo mb-4"
-        src="https://res.cloudinary.com/dfnxivzkc/image/upload/v1606100361/Website/logo_jbhlbs.png"
+        src="https://res.cloudinary.com/mahana/image/upload/v1606100361/Website/logo_jbhlbs.png"
         alt="Mahana Logo"
       />
       <h1 class="mb-5">Coming soon</h1>
@@ -38,14 +38,14 @@ export default {
   text-align: center;
   padding-bottom: $spacer-6;
 
-  background-image: url('https://res.cloudinary.com/dfnxivzkc/image/upload/c_fill,f_auto,h_1000,w_1000/v1606100248/Website/homepage-hero-desktop_zt9gum.jpg');
+  background-image: url('https://res.cloudinary.com/mahana/image/upload/c_fill,f_auto,h_1000,w_1000/v1606100248/Website/homepage-hero-desktop_zt9gum.jpg');
   @include media-breakpoint-up(sm) {
     background-position: center center;
     background-size: cover;
     justify-content: flex-start;
     padding-left: $spacer-9;
     padding-bottom: $spacer-8;
-    background-image: url('https://res.cloudinary.com/dfnxivzkc/image/upload/f_auto/v1606100248/Website/homepage-hero-desktop_zt9gum.jpg');
+    background-image: url('https://res.cloudinary.com/mahana/image/upload/f_auto/v1606100248/Website/homepage-hero-desktop_zt9gum.jpg');
   }
 }
 
