@@ -1,63 +1,85 @@
 <template>
-  <div class="landing">
-    <div>
-      <g-image
-        class="logo mb-4"
-        src="https://res.cloudinary.com/dfnxivzkc/image/upload/v1606100361/Website/logo_jbhlbs.png"
-        alt="Mahana Logo"
-      />
-      <h1 class="mb-5">Coming soon</h1>
-      <p class="text-white mb-0">Media & Investor Enquires</p>
-      <p class="">
-        <a title="Email Ed McCullagh" href="mailto:ed@mahanabiopharma.co.nz"
-          >ed@mahanabiopharma.co.nz</a
-        >
-      </p>
-    </div>
-  </div>
+  <Layout>
+    <section class="hero">
+      <div class="hero-content pb-8 text-center">
+        <h1 class="text-2xl">A Cure for Migraine is Coming</h1>
+        <h2 class="text-lg">
+          Harnessing cannabis plant genetics to create novel migraine medicines from unique
+          cultivars
+        </h2>
+        <h3>Register your interest</h3>
+      </div>
+    </section>
+    <section class="container py-10">
+      <div class="row align-items-center ">
+        <div class="col-sm-5">
+          <p class="text-primary section-text">
+            <strong>Mahana Biopharma</strong> is a NZ owned and operated Medical Cannabis company
+            dedicated to migraine headache product development and research for prescripbers and
+            patient in New Zealand and around the world
+          </p>
+        </div>
+        <div class="col-sm-7">
+          <g-image
+            src="~/assets/images/women-in-sun.jpg"
+            alt="Smiling women in the sun"
+            width="600"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="container py-10">
+      <div class="row">
+        <div class="col-sm-6"></div>
+        <div class="col-sm-6">
+          <h3>Our Products</h3>
+        </div>
+      </div>
+    </section>
+  </Layout>
 </template>
 
 <script>
+import MailchimpSubscribe from 'vue-mailchimp-subscribe'
+
 export default {
   metaInfo: {
-    title: 'A Cure for Migraine is Coming'
+    title: 'Mahana Biopharma'
+  },
+  components: {
+    MailchimpSubscribe
+  },
+  methods: {
+    onError() {
+      // handle error
+    },
+    onSuccess() {
+      // handle success
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.landing {
-  background-color: #0a0b14;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.hero {
+  background-image: url(../assets/images/homepage-hero-desktop.jpg);
+  background-size: cover;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
-  text-align: center;
-  padding-bottom: $spacer-6;
-
-  background-image: url('https://res.cloudinary.com/dfnxivzkc/image/upload/c_fill,f_auto,h_1000,w_1000/v1606100248/Website/homepage-hero-desktop_zt9gum.jpg');
-  @include media-breakpoint-up(sm) {
-    background-position: center center;
-    background-size: cover;
-    justify-content: flex-start;
-    padding-left: $spacer-9;
-    padding-bottom: $spacer-8;
-    background-image: url('https://res.cloudinary.com/dfnxivzkc/image/upload/f_auto/v1606100248/Website/homepage-hero-desktop_zt9gum.jpg');
-  }
 }
 
-.logo {
-  width: 160px;
-  @include media-breakpoint-up(sm) {
-    width: 200px;
-  }
-}
-
-h1 {
-  font-size: $text-xl;
+.hero-content {
+  max-width: 700px;
   color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-text {
+  transform: translateX(160px);
+  position: relative;
+  z-index: 10;
 }
 </style>

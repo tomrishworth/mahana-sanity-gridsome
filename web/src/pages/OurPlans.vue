@@ -3,7 +3,7 @@
     <hero-title
       class="mb-8"
       pageTitle="Our Plans"
-      imageUrl="https://res.cloudinary.com/dfnxivzkc/image/upload/v1606074932/Website/aaron-birch-W_J6ZNPGru4-unsplash_tnbyt9.jpg"
+      cloudinaryImageId="aaron-birch-W_J6ZNPGru4-unsplash_tnbyt9.jpg"
       intro="From our home base in Auckland, we aim to be the global leading medical cannabis migraine company in the world."
     ></hero-title>
     <section class="container-md">

@@ -18,6 +18,7 @@ import {
 } from 'bootstrap-vue'
 
 import VueSimpleMarkdown from 'vue-simple-markdown'
+import '../cloudinary.js'
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function(Vue, { router, head, isClient }) {

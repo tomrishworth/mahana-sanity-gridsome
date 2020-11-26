@@ -6,7 +6,7 @@ export default {
         templateRepoId: 'sanity-io/sanity-template-gridsome-blog'
       }
     },
-    {name: 'structure-menu'},
+    { name: 'structure-menu' },
     {
       name: 'project-info',
       options: {
@@ -25,7 +25,7 @@ export default {
                 },
                 {
                   buildHookId: '5fa0ad535e94681c395f1f23',
-                  title: 'Blog Website',
+                  title: 'Mahana Website',
                   name: 'mahana-sanity-gridsome',
                   apiId: '38bf580b-7b5d-4771-810e-52608be5f7fd'
                 }
@@ -39,15 +39,13 @@ export default {
             value: 'https://github.com/tomrishworth/mahana-sanity-gridsome',
             category: 'Code'
           },
-          {title: 'Frontend', value: 'https://mahana-sanity-gridsome.netlify.app', category: 'apps'}
+          {
+            title: 'Frontend',
+            value: 'https://mahana-sanity-gridsome.netlify.app',
+            category: 'apps'
+          }
         ]
       }
-    },
-    {name: 'project-users', layout: {height: 'auto'}},
-    {
-      name: 'document-list',
-      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
-      layout: {width: 'medium'}
     }
   ]
 }

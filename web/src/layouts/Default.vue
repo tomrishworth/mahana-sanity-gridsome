@@ -66,7 +66,22 @@ query {
 .navbar-brand {
   position: absolute;
   top: 0;
-  left: $spacer-4;
+  left: $spacer-8;
+  &::before {
+    content: '';
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 60%);
+    z-index: 1;
+  }
+  img {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .nav-link {

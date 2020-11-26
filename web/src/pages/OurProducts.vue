@@ -3,7 +3,7 @@
     <hero-title
       class="mb-8"
       pageTitle="Our Products"
-      imageUrl="https://res.cloudinary.com/dfnxivzkc/image/upload/v1606072116/Website/piha_lomlcn.jpg"
+      cloudinaryImageId="louis-reed-pwcKF7L4-no-unsplash_m4ku8c.jpg"
       intro="Mahana is creating premium terpene and cannabinoid-based therapeutic products able to treat and support the health of patients suffering debilitating migraine headache.
 "
     ></hero-title>

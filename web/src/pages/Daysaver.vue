@@ -1,10 +1,6 @@
 <template>
   <Layout>
-    <hero-title
-      class="mb-8"
-      pageTitle="Daysaver"
-      imageUrl="https://res.cloudinary.com/dfnxivzkc/image/upload/v1606072116/Website/piha_lomlcn.jpg"
-    ></hero-title>
+    <hero-title class="mb-8" pageTitle="Daysaver" cloudinaryImageId="piha_lomlcn.jpg"></hero-title>
     <section class="static">
       <div class="container-md ">
         <p>

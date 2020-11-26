@@ -32,11 +32,6 @@ module.exports = {
   siteName: 'Mahana Biopharma',
   siteDescription:
     'Harnessing cannabis plant genetics to create novel migraine medicines from unique cultivars',
-
-  templates: {
-    SanityPost: '/:slug__current'
-  },
-
   plugins: [
     {
       use: 'gridsome-plugin-purgecss',
