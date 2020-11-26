@@ -7,7 +7,7 @@
           Harnessing cannabis plant genetics to create novel migraine medicines from unique
           cultivars
         </h2>
-        <h3 class="text-md">Register your interest</h3>
+        <h3 class="text-lg">Register your interest</h3>
         <mailchimp-subscribe
           url="https://xxx.xxx.list-manage.com/subscribe/post-json"
           user-id="xxx"
