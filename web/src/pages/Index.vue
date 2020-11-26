@@ -3,11 +3,36 @@
     <section class="hero">
       <div class="hero-content pb-8 text-center">
         <h1 class="text-2xl">A Cure for Migraine is Coming</h1>
-        <h2 class="text-lg">
+        <h2 class="text-lg mb-6">
           Harnessing cannabis plant genetics to create novel migraine medicines from unique
           cultivars
         </h2>
-        <h3>Register your interest</h3>
+        <h3 class="text-md">Register your interest</h3>
+        <mailchimp-subscribe
+          url="https://xxx.xxx.list-manage.com/subscribe/post-json"
+          user-id="xxx"
+          list-id="xxx"
+          @error="onError"
+          @success="onSuccess"
+        >
+          <template v-slot="{ subscribe, setEmail, error, success, loading }">
+            <form @submit.prevent="subscribe">
+              <div class="d-flex">
+                <input
+                  class="form-control mr-4"
+                  placeholder="Email Address"
+                  type="email"
+                  @input="setEmail($event.target.value)"
+                />
+                <button class="btn btn-primary" type="submit">Register</button>
+              </div>
+
+              <div v-if="error">{{ error }}</div>
+              <div v-if="success">Yay!</div>
+              <div v-if="loading">Loading…</div>
+            </form>
+          </template>
+        </mailchimp-subscribe>
       </div>
     </section>
     <section class="container py-10">
